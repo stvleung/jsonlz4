@@ -86,7 +86,7 @@ cargo clippy --all-targets -- -D warnings
 cargo fmt --check
 ```
 
-The minimum supported Rust version (MSRV) is **1.74**.
+The minimum supported Rust version (MSRV) is **1.85**.
 
 ## References
 

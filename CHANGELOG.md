@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Library API: `encode`, `decode`, `parse_header`, `MAGIC`, `HEADER_SIZE`.
 - CLI: `jsonlz4 [-d|-c] IN_FILE [OUT_FILE]` with `-` stdin/stdout support.
 - Unit tests for the library and integration tests for the CLI.
-- GitHub Actions CI: build, test, fmt, clippy across stable and MSRV.
+- GitHub Actions CI: build, test, fmt, clippy across stable and MSRV (1.85).
 - GitHub Actions release workflow: prebuilt binaries for Linux (x86_64,
   aarch64), macOS (x86_64, arm64), and Windows (x86_64) on tag push.
 

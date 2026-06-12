@@ -21,7 +21,7 @@ jobs:
         rust: [stable]
         include:
           - os: ubuntu-latest
-            rust: "1.74"  # MSRV — keep in sync with Cargo.toml
+            rust: "1.85"  # MSRV — keep in sync with Cargo.toml
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@master

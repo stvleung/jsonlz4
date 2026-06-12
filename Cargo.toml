@@ -2,7 +2,7 @@
 name = "jsonlz4"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.74"
+rust-version = "1.85"
 authors = ["Steven Leung"]
 description = "Compress and decompress Mozilla Firefox .jsonlz4 / .mozlz4 files"
 license = "BSD-2-Clause"
