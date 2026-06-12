@@ -1,0 +1,41 @@
+[package]
+name = "jsonlz4"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+authors = ["Steven Leung"]
+description = "Compress and decompress Mozilla Firefox .jsonlz4 / .mozlz4 files"
+license = "BSD-2-Clause"
+repository = "https://github.com/stvleung/jsonlz4"
+homepage = "https://github.com/stvleung/jsonlz4"
+documentation = "https://docs.rs/jsonlz4"
+readme = "README.md"
+keywords = ["lz4", "firefox", "mozlz4", "jsonlz4", "bookmarks"]
+categories = ["command-line-utilities", "compression"]
+exclude = [
+    ".github/",
+    "tests/fixtures/*.bin",
+]
+
+[lib]
+name = "jsonlz4"
+path = "src/lib.rs"
+
+[[bin]]
+name = "jsonlz4"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+lz4_flex = { version = "0.11", default-features = false, features = ["std"] }
+thiserror = "2"
+
+[dev-dependencies]
+assert_cmd = "2"
+predicates = "3"
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"
